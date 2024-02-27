@@ -1,0 +1,115 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "basics": {
+    "name": "Andrey Kryuchenko",
+    "label": "Quality Assurance Engineering Manager at inDrive",
+    "image": "",
+    "email": "andrey1984@gmail.com",
+    "url": "",
+    "summary": "Experienced QA engineer with a proven track record of success in leading and managing teams, implementing test automation, and ensuring product quality. Focusing on quality and rapid issue resolution. Currently living in Cyprus with a temporary Residence Permit and possessing a B2 level of English proficiency. Always looking for new challenges and opportunities to contribute to the success of companies and projects.",
+    "location": {
+      "countryCode": "CY",
+      "address": "Cyprus"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "kryuchenko",
+        "url": "https://www.linkedin.com/in/kryuchenko/"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "inDrive",
+      "position": "Quality Assurance Engineering Manager",
+      "startDate": "2022-04-30",
+      "endDate": "",
+      "highlights": [],
+      "summary": "Main activities and responsibilities\n- Initiated field testing in the company, engaging over 250 employees and identifying about 100 critical bugs, thereby enhancing product quality and boosting both user satisfaction and employee understanding of and engagement with the product.\n\n- Coordinated and supervised cross-team end-to-end (e2e) tests, field tests, and other actions for major launch in new markets, such as the USA. These efforts played a crucial role in enabling a smooth launch on this strategically important market without encountering any critical or high-priority issues.\n\n- Ensured product quality and compliance with Thai regulatory requirements, securing timely licensing. Identified and resolved 10% non-compliance in functionality, crucial for market operations to avoid financial losses and operational setbacks.\n\n- Led the transition to microservices in key markets, focusing on quality and rapid issue resolution across the order cycle, impacting the process from order initiation to completion for both passengers and drivers.\n\n- Led 10+ QA engineers across 4 teams, overseeing InDrive's product quality and testing automation. Successfully hired and integrated 12 mid-to-senior-level engineers, achieving an 83% one-year retention rate.\n\n- Implementing transparent, product-oriented UI test automation within the four teams under my supervision, successfully achieving a sustainable increase in UI auto-test coverage from 0% to 20%.\n\n- Effectively mitigated the bus-factor risk within six months by promoting knowledge sharing and robust documentation among QA engineers, ensuring no single individual held critical competencies that could disrupt processes in their absence.\n\n- Developed a Python-based tool using the OpenAI ChatGPT 4, to analyse thousands of user inquiries to customer support. It categorised inquiries, identified previously unnoticed issues, assessed their quantitative significance, and tracked trends in issue resolution, providing valuable insights.",
+      "url": "https://indrive.com/",
+      "location": "Nicosia, Cyprus"
+    },
+    {
+      "name": "Infourok",
+      "position": "Head of the testing department",
+      "startDate": "2021-12-31",
+      "endDate": "2022-03-31",
+      "highlights": [],
+      "summary": "Joined a seasoned educational service team poised for a complete service relaunch. My role was crucial in establishing the software testing process and forming the test team, which I accomplished with success.\n\nKey Achievements:\n-   Developed and implemented the full recruitment process for the testing team, handling job postings, resume screening, interview organization, and candidate selection.\n-   Successfully hired and onboarded two testers, ensuring their smooth integration into product operations and processes, leading to successful probation completion.\n-   Extended offers to two additional candidates, but further hiring and any development initiatives were paused due to strategic changes prompted by the Russian-Ukrainian conflict.",
+      "url": "https://infourok.ru/",
+      "location": "Moscow, Russia"
+    },
+    {
+      "name": "Yandex",
+      "position": "Lead QA at Yandex.Lavka",
+      "startDate": "2021-04-30",
+      "endDate": "2021-12-31",
+      "highlights": [],
+      "summary": "Yandex.Lavka is the largest Russian online grocery delivery service. I led the testing department during major international launches in Paris, London and Tel Aviv. \n\nI succeeded in building and scaling the testing team, according to the needs of the product, which helped the product ensure quality standards and deliver new functionality to users in a timely manner and with high quality.\n\nYandex highly appreciated my work. During the semi-annual review, I got the highest scores available (++++) for the work done and was promoted to the next grade.\n\nKey achievements:\n- Ensured high-quality of the product during major international launches.\n- Hired the majority of the testing team, integrating them into the company and familiarizing them with the product.\n- Maintained a high level of tester team loyalty, motivation and satisfaction.",
+      "url": "https://yandex.ru/company/",
+      "location": "Moscow, Russia"
+    },
+    {
+      "name": "FunCorp",
+      "position": "Senior Quality Assurance Engineer",
+      "startDate": "2018-12-31",
+      "endDate": "2021-04-30",
+      "highlights": [],
+      "summary": "- Functional testing of Front End (web)\n- Functional testing of Back End (REST API)\n- Functional testing of client-server applications (Android and iOS)\n- Writing bug reports\n- Writing tasks for implementing new functionality\n- Writing and supporting test plan for iFunny.co in Zephyr\n- Writing a test plan for internal tools\n- Writing and maintaining up-to-date site documentation and internal tools in Confluence\n- Regular regression testing",
+      "url": "https://www.linkedin.com/company/funcorp/",
+      "location": "Moscow, Russia"
+    },
+    {
+      "name": "Работа.ру",
+      "position": "Software Test Engineer",
+      "startDate": "2017-07-31",
+      "endDate": "2018-12-31",
+      "highlights": [],
+      "summary": "- Web testing\n- Functional testing (back and front)\n- REST API testing\n- Regression testing\n- UI/UX testing;\n- Cross-browser testing using virtualization (Chrome, FireFox, IE, EDGE, Android)\n- Log processing and analysis (grep, sed + regex)\n- Bulk mailing testing, monitoring SMTP logs\n- Writing bug reports\n- Writing tasks (suggestions) for the implementation of new functionality\n- Writing automated API tests using Postman + JS\n- Support of the current automated API tests in Behat (Gherkin)\n- Writing simple automated API tests in Behat (Gherkin)\n- Testing Android / iOS applications\n- Writing internal instructions and documentation\n- Acting release manager (occasional)",
+      "url": "https://www.linkedin.com/company/rabotaru/",
+      "location": "Moscow, Russia"
+    },
+    {
+      "name": "Kaspersky Lab",
+      "position": "Software Localization Engineer",
+      "startDate": "2014-04-30",
+      "endDate": "2017-07-31",
+      "highlights": [],
+      "summary": "Localization Manager:\n\n- Oversaw software localization, ensuring quality and adherence to regional standards.\n- Managed ongoing content updates and translation consistency.\n- Coordinated with regional offices and agencies, aligning project completion with business objectives.",
+      "url": "https://www.linkedin.com/company/kaspersky/",
+      "location": "Moscow, Russia"
+    },
+    {
+      "name": "Eagle Dynamics SA",
+      "position": "Localization Manager",
+      "startDate": "2009-04-30",
+      "endDate": "2014-07-31",
+      "highlights": [],
+      "summary": "- Ensured product localization quality.\n- Conducted functional and regression testing.\n- Processed and created bug reports.\n- Managed volunteer translator teams and freelance translators.\n- Updated localization continually and supervised project deadlines.",
+      "url": "https://www.linkedin.com/company/eagle-dynamics/",
+      "location": "Moscow, Russia"
+    }
+  ],
+  "education": [
+    {
+      "institution": "Republican Art College",
+      "area": "Graphic Design",
+      "studyType": "secondary professional education ",
+      "startDate": "2000-09-30",
+      "endDate": "2004-08-31",
+      "score": "",
+      "courses": []
+    }
+  ],
+  "languages": [
+    {
+      "fluency": "Professional Working",
+      "language": "English"
+    },
+    {
+      "fluency": "Native Speaker",
+      "language": "Russian"
+    }
+  ]
+}

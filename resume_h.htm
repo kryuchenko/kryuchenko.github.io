@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+</head>
+<body>
+    <div id="resume"></div>
+    <script>
+        // Функция для загрузки данных из JSON файла
+        function loadResume() {
+            fetch('resume.json')
+                .then(response => response.json())
+                .then(data => {
+                    displayResume(data);
+                })
+                .catch(error => console.error('Error loading the resume:', error));
+        }
+
+        // Функция для отображения данных резюме на странице
+        function displayResume(data) {
+            const resumeDiv = document.getElementById('resume');
+            
+            // Добавление информации о работе
+            if (data.work) {
+                const workSection = document.createElement('section');
+                workSection.innerHTML = '<h2>Experience</h2>';
+                data.work.forEach(job => {
+                    workSection.innerHTML += `<div><strong>${job.position}</strong> at ${job.company}</div>
+                                              <div>${job.startDate} - ${job.endDate}</div>
+                                              <p>${job.summary}</p>`;
+                });
+                resumeDiv.appendChild(workSection);
+            }
+
+            // Добавление образовательной информации
+            if (data.education) {
+                const eduSection = document.createElement('section');
+                eduSection.innerHTML = '<h2>Education</h2>';
+                data.education.forEach(edu => {
+                    eduSection.innerHTML += `<div><strong>${edu.institution}</strong>, ${edu.area}</div>
+                                             <div>${edu.startDate} - ${edu.endDate}</div>
+                                             <p>Degree: ${edu.studyType}</p>`;
+                });
+                resumeDiv.appendChild(eduSection);
+            }
+
+            // Добавление информации о языках
+            if (data.languages) {
+                const langSection = document.createElement('section');
+                langSection.innerHTML = '<h2>Languages</h2><ul>';
+                data.languages.forEach(lang => {
+                    langSection.innerHTML += `<li>${lang.language} (${lang.fluency})</li>`;
+                });
+                langSection.innerHTML += '</ul>';
+                resumeDiv.appendChild(langSection);
+            }
+        }
+
+        // Вызов функции загрузки данных резюме при загрузке страницы
+        window.onload = loadResume;
+    </script>
+</body>
+</html>
