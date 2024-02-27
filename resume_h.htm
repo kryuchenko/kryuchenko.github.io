@@ -4,11 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        section {
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #333;
+            font-size: 24px;
+        }
+        div {
+            margin-bottom: 5px;
+        }
+        p {
+            margin-top: 5px;
+            color: #666;
+        }
+    </style>
 </head>
 <body>
     <div id="resume"></div>
     <script>
-        // Функция для загрузки данных из JSON файла
+        // Function to load data from a JSON file
         function loadResume() {
             fetch('resume.json')
                 .then(response => response.json())
@@ -18,11 +38,11 @@
                 .catch(error => console.error('Error loading the resume:', error));
         }
 
-        // Функция для отображения данных резюме на странице
+        // Function to display resume data on the page
         function displayResume(data) {
             const resumeDiv = document.getElementById('resume');
             
-            // Добавление информации о работе
+            // Adding work information
             if (data.work) {
                 const workSection = document.createElement('section');
                 workSection.innerHTML = '<h2>Experience</h2>';
@@ -34,7 +54,7 @@
                 resumeDiv.appendChild(workSection);
             }
 
-            // Добавление образовательной информации
+            // Adding educational information
             if (data.education) {
                 const eduSection = document.createElement('section');
                 eduSection.innerHTML = '<h2>Education</h2>';
@@ -46,7 +66,7 @@
                 resumeDiv.appendChild(eduSection);
             }
 
-            // Добавление информации о языках
+            // Adding language information
             if (data.languages) {
                 const langSection = document.createElement('section');
                 langSection.innerHTML = '<h2>Languages</h2><ul>';
@@ -58,7 +78,7 @@
             }
         }
 
-        // Вызов функции загрузки данных резюме при загрузке страницы
+        // Call the function to load resume data when the page loads
         window.onload = loadResume;
     </script>
 </body>
