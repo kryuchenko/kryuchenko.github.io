@@ -6,15 +6,19 @@
     <title>Resume</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
+            font-family: 'Helvetica', 'Arial', sans-serif, 'Ubuntu';
+            color: #333;
+            background-color: #f8f8f8;
+            padding: 20px;
+            margin: 0;
+            text-align: left;
+            line-height: 1.6;
+        }
+        h2 {
+            color: #000;
         }
         section {
             margin-bottom: 20px;
-        }
-        h2 {
-            color: #333;
-            font-size: 24px;
         }
         div {
             margin-bottom: 5px;
@@ -23,10 +27,45 @@
             margin-top: 5px;
             color: #666;
         }
+        .content {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .button, .back-button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px 0;
+            background-color: #0056b3;
+            color: white;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover, .back-button:hover {
+            background-color: #004494;
+        }
+        .back-button {
+            background-color: #f8f8f8; /* Light background for the back button */
+            color: #0056b3; /* Darker text color for better contrast */
+            border: 1px solid #0056b3; /* Border to make it stand out */
+        }
+        .contact-info a, .back-button:hover {
+            color: #0056b3;
+            text-decoration: none;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
-    <div id="resume"></div>
+    <div id="resume" class="content"></div>
     <script>
         // Function to load data from a JSON file
         function loadResume() {
