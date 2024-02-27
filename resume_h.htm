@@ -2,21 +2,12 @@
 function displayResume(data) {
     const resumeDiv = document.getElementById('resume');
     
-    // Function to replace newlines with HTML breaks
-    function formatText(text) {
-        // Replace double newlines with paragraph breaks
-        let formattedText = text.replace(/\n\n/g, '<br><br>');
-        // Replace single newlines with line breaks
-        formattedText = formattedText.replace(/\n/g, '<br>');
-        return formattedText;
-    }
-    
     // Adding work information
     if (data.work) {
         const workSection = document.createElement('section');
         workSection.innerHTML = '<h2>Experience</h2>';
         data.work.forEach(job => {
-            const summary = formatText(job.summary);
+            const summary = job.summary.replace(/\n\n/g, '<br><br>');
             workSection.innerHTML += `<div><strong>${job.position}</strong> at ${job.company}</div>
                                       <div>${job.startDate} - ${job.endDate}</div>
                                       <p>${summary}</p>`;
@@ -29,7 +20,7 @@ function displayResume(data) {
         const eduSection = document.createElement('section');
         eduSection.innerHTML = '<h2>Education</h2>';
         data.education.forEach(edu => {
-            const eduDetails = formatText(edu.studyType); // Assuming studyType might have newlines for the sake of example
+            const eduDetails = edu.studyType.replace(/\n\n/g, '<br><br>');
             eduSection.innerHTML += `<div><strong>${edu.institution}</strong>, ${edu.area}</div>
                                      <div>${edu.startDate} - ${edu.endDate}</div>
                                      <p>Degree: ${eduDetails}</p>`;
