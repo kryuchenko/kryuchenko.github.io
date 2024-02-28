@@ -1,26 +1,51 @@
-function displayResume(data) {
-    const resumeDiv = document.getElementById('resume');
-    
-    // Function to safely format text with newlines to HTML
-    function formatText(text) {
-        let formattedText = document.createElement('div');
-        formattedText.textContent = text; // This safely escapes HTML special chars
-        return formattedText.innerHTML.replace(/\n\n/g, '<br><br>').replace(/\n/g, '<br>');
-    }
-    
-    // Adding work information
-    if (data.work) {
-        const workSection = document.createElement('section');
-        workSection.innerHTML = '<h2>Experience</h2>';
-        data.work.forEach(job => {
-            let jobSummary = document.createElement('p');
-            jobSummary.innerHTML = formatText(job.summary); // Safely insert text
-            workSection.appendChild(document.createElement('div')).innerHTML = `<strong>${job.position}</strong> at ${job.company}`;
-            workSection.appendChild(document.createElement('div')).textContent = `${job.startDate} - ${job.endDate}`;
-            workSection.appendChild(jobSummary);
-        });
-        resumeDiv.appendChild(workSection);
-    }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+</head>
+<body>
+    <div id="resume"></div>
+    <script>
+        function displayResume(data) {
+            const resumeDiv = document.getElementById('resume');
+            
+            // Function to safely format text with newlines to HTML
+            function formatText(text) {
+                let formattedText = document.createElement('div');
+                // This initially sets the text content to escape HTML special chars
+                formattedText.textContent = text;
+                // Then replaces newlines with HTML break lines within the text content itself
+                return formattedText.textContent.replace(/\n\n/g, '<br><br>').replace(/\n/g, '<br>');
+            }
+            
+            // Adding work information
+            if (data.work) {
+                const workSection = document.createElement('section');
+                workSection.innerHTML = '<h2>Experience</h2>';
+                data.work.forEach(job => {
+                    let jobDetail = document.createElement('div');
+                    jobDetail.innerHTML = `<strong>${job.position}</strong> at ${job.company}<br>${job.startDate} - ${job.endDate}`;
+                    let jobSummary = document.createElement('p');
+                    jobSummary.innerHTML = formatText(job.summary); // Safely insert formatted text
+                    workSection.appendChild(jobDetail);
+                    workSection.appendChild(jobSummary);
+                });
+                resumeDiv.appendChild(workSection);
+            }
 
-    // Similar for other sections like education and languages
-}
+            // Proceed with similar logic for other sections like education and languages
+        }
+
+        // Example usage
+        document.addEventListener('DOMContentLoaded', function() {
+            // Assuming 'data' is available or fetched from 'resume.json'
+            fetch('resume.json')
+                .then(response => response.json())
+                .then(data => displayResume(data))
+                .catch(error => console.error('Error loading the resume:', error));
+        });
+    </script>
+</body>
+</html>
