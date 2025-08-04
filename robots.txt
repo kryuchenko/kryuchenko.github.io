@@ -1,3 +1,9 @@
 User-agent: *
 Allow: /
 Disallow:
+
+# Additional crawling hints
+Crawl-delay: 1
+
+# Link to GitHub profile for additional context
+# GitHub: https://github.com/kryuchenko
