@@ -1,6 +1,15 @@
 User-agent: *
 Allow: /
 
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Yandex
+Allow: /
+
 Sitemap: https://kryuchenko.github.io/sitemap.xml
 
 Crawl-delay: 1
