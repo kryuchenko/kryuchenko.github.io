@@ -10,6 +10,15 @@ Allow: /
 User-agent: Yandex
 Allow: /
 
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: OpenAIBot
+Allow: /
+
 Sitemap: https://kryuchenko.github.io/sitemap.xml
 
 Crawl-delay: 1
